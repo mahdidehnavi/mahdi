@@ -4,8 +4,6 @@
 
 using namespace std;
 
-<<<<<<< HEAD
-=======
 Hero::Hero(/* args */)
 {
     
@@ -29,4 +27,4 @@ Hero::~Hero()
 {
 }
 
->>>>>>> d8c3ad925ce924e79ebef436ec276c2a6bf75317
+
