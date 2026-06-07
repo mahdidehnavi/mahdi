@@ -10,7 +10,7 @@ private:
     bool alive;
 public:
     Hero(/* args */);
-    virtual void ability1();
+    virtual void ability1(); 
     virtual void ability2();
     virtual void special_ablity();
     ~Hero();

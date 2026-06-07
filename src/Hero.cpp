@@ -6,7 +6,7 @@ using namespace std;
 
 Hero::Hero(/* args */)
 {
-    
+     
 }
 
 void Hero::ability1()
