@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+#include "Hero.hpp"
 
 using namespace std;
 

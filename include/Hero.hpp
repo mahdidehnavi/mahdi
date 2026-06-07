@@ -7,7 +7,7 @@ private:
     std::string name ;
     std::string role;
     int hp;
-    bool elive;
+    bool alive;
 protected:
     Hero(/* args */);
     virtual void ability1(); 
