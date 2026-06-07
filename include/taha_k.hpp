@@ -10,10 +10,3 @@ public:
     ~taha_k();
 };
 
-taha_k::taha_k(/* args */)
-{
-}
-
-taha_k::~taha_k()
-{
-}
