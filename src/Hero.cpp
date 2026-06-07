@@ -1,12 +1,12 @@
 #include <iostream>
 #include <string>
-#include "Hero.hpp"
+
 
 using namespace std;
 
 Hero::Hero(/* args */)
 {
-     
+
 }
 
 void Hero::ability1()

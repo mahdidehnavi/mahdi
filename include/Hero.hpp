@@ -7,8 +7,8 @@ private:
     std::string name ;
     std::string role;
     int hp;
-    bool alive;
-public:
+    bool elive;
+protected:
     Hero(/* args */);
     virtual void ability1(); 
     virtual void ability2();
