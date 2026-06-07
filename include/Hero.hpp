@@ -7,15 +7,9 @@ private:
     std::string name ;
     std::string role;
     int hp;
+    bool alive;
 public:
     Hero(/* args */);
     ~Hero();
 };
 
-Hero::Hero(/* args */)
-{
-}
-
-Hero::~Hero()
-{
-}
