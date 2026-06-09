@@ -8,8 +8,9 @@ private:
 public:
     controller(/* args */);
     int get_number();
-    void end_game();
+    void starting_team(string & , string &);
     void manager_step();
+    void end_game();
     ~controller();
 };
 

@@ -10,10 +10,19 @@ int main()
 {
     cout << "════════════════════════════════════════════════════════════════════ \n";
     cout << " welcome to the game : (SEYED KHANDEH) .                             \n";
-    cout << "════════════════════════════════════════════════════════════════════  \n";
+    cout << "════════════════════════════════════════════════════════════════════  \n\n";
 
+
+    string teamA;
+    string teamB;
+
+    cout << "Enter Team A Name : " ;
+    getline(cin ,teamA);
+    cout << "Enter Team B Name : " ;
+    getline(cin ,teamB);
     
-
+    controller k;
+    k.starting_team(teamA,teamB);
 
     string command ;
     int number = 0 ;
