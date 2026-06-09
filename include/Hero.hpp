@@ -6,15 +6,16 @@ class Hero
 protected:
     std::string name ;
     std::string role;
-    int hp;
+    int Hp;
     bool alive;
+    std::string Angry_massage;
 public:
-    Hero(/* args */);
+    Hero(std::string n, std::string ro , int h );
     virtual void ability1(); 
     virtual void ability2();
     virtual void special_ablity();
-    string get_name() const;
-    string get_role() const;
+    std::string get_name() const;
+    std::string get_role() const;
     int get_hp() const;
     bool get_alive() const;
     ~Hero();

@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
+#include "taha_k.hpp"
 
 using namespace std;
-#include "taha_k.hpp"
 
 
 taha_k::taha_k(/* args */)

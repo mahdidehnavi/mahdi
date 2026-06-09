@@ -1,12 +1,13 @@
 #pragma once
 #include <string>
+#include "Hero.hpp"
 
-class taha_k
+class taha_k : public Hero
 {
 private:
-    /* data */
+    
 public:
-    taha_k(/* args */);
-    ~taha_k();
+    // taha_k(/* args */);
+    // ~taha_k();
 };
 

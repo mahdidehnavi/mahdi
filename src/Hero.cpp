@@ -4,9 +4,11 @@
 
 using namespace std;
 
-Hero::Hero(/* args */)
+Hero::Hero(string n, string ro , int h )
 {
-
+    name = n;
+    role = ro;
+    Hp = h;
 }
 
 void Hero::ability1()
@@ -34,7 +36,7 @@ string Hero::get_role() const
     
 int Hero::get_hp() const
 {
-    return hp;
+    return Hp;
 }
     
 bool Hero::get_alive() const
