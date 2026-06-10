@@ -14,14 +14,13 @@ int main()
     cout << " welcome to the game : (SEYED KHANDEH) .                             \n";
     cout << "════════════════════════════════════════════════════════════════════  \n";
 
-
-    string teamA;
-    string teamB;
+    string teamA_name;
+    string teamB_name;
 
     cout << "Enter Team A Name : " ;
-    getline(cin ,teamA);
+    getline(cin ,teamA_name);
     cout << "Enter Team B Name : " ;
-    getline(cin ,teamB);
+    getline(cin ,teamB_name);
     
     controller k;
     k.starting_team(teamA,teamB);
@@ -29,6 +28,7 @@ int main()
     cout << "════════════════════════════════════════════════════════════════════  \n";
     srand(static_cast<unsigned int>(time(0))) ;
 
+    k.starting_team(teamA_name,teamB_name);
 
     string command ;
 
@@ -92,6 +92,23 @@ int main()
             return 0;
         }
     
+    
+    int round = 1 ;
+    while (round <= 15)
+    {
+        for(int i = 1 ; i >= 0 ; i--)
+        {
+            int energy = k.Energy_level(round , i);
+            
+
+            
+        }
+        
+        round++;
+    }
+    
+
+
 
     return 0;
 }

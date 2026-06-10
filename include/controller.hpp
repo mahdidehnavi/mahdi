@@ -7,16 +7,18 @@ class controller
 private:
 
     int number;
+    int enegry;
 public:
     std::vector <std::string> team ;
     controller(/* args */);
-    int get_number();
+    void end_game();
     void starting_team(string & , string &);
+    int Energy_level(const int , const bool);
     void show_hero();   
     void choice_heros();
     void end_game();
     void manager_step();
-    void end_game();
+    int get_number();
     ~controller();
 };
 

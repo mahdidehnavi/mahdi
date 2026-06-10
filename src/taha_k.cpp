@@ -4,14 +4,12 @@
 
 using namespace std;
 
+taha_k::taha_k() :Hero("Taha kochike" , "Healer" , 500 , 3 , "<< All in their place! This area is contaminated! >>" )
+{
+    
+}
 
-// taha_k::taha_k(/* args */)
-// {
-// }
+taha_k::~taha_k()
+{
+}
 
-
-
-
-// taha_k::~taha_k()
-// {
-// }
