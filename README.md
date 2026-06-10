@@ -1,3 +1,9 @@
+mahdi dehnavi 40412358018
+mohammad javad kazemlo 40412358038
+
+origin	https://github.com/mahdidehnavi/mahdi.git (fetch)
+origin	https://github.com/mahdidehnavi/mahdi.git (push)
+
 # Advanced Programming - Assignment 2
 
 Second assignment of the Advanced Programming course
@@ -6,5 +12,3 @@ Bu-Ali Sina University
 
 Implemented in C++
 
-mahdi dehnavi 
-mohammad javad kazemlo

@@ -7,5 +7,6 @@ class shahriar : public Hero
 private:
     
 public:
-
+    shahriar();
+    ~shahriar();
 };

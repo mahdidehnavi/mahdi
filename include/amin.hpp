@@ -7,5 +7,6 @@ class amin : public Hero
 private:
     
 public:
-
+    amin();
+    ~amin();
 };
