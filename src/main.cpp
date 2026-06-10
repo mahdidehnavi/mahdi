@@ -26,7 +26,6 @@ int main()
     controller k;
     k.starting_team(teamA,teamB);
 
-    cout << "════════════════════════════════════════════════════════════════════  \n";
     srand(static_cast<unsigned int>(time(0))) ;
 
 
@@ -74,8 +73,8 @@ int main()
 
 
 
-                    count++;
-                    turn = 2;
+                    count--;
+                    turn = 1;
                 }
                 
                 

@@ -35,6 +35,7 @@ void controller::choice_heros()
     int selectedCount = 0;
     while (k > 0)
     {
+        //باید طوری باش=ه که هر بازیکن چند بار انتخاب نشه 
         cout << "Enter a number for choice hero (1-7): ";
         
         int choice;
