@@ -7,5 +7,6 @@ class poya : public Hero
 private:
     
 public:
-
+    poya();
+    ~poya();
 };

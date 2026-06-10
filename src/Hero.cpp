@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Hero::Hero(string n, string ro , int h ,int rage , std::string AngMas )
+Hero::Hero(string n, string ro , int h ,int rage , string AngMas )
 {
     name = n;
     role = ro;

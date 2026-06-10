@@ -5,7 +5,7 @@ class controller
 {
 private:
     int number;
-    int angry;
+    int enegry;
 public:
     controller(/* args */);
     void end_game();
