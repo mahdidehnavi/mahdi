@@ -12,24 +12,31 @@ int main()
     cout << " welcome to the game : (SEYED KHANDEH) .                             \n";
     cout << "════════════════════════════════════════════════════════════════════  \n\n";
 
-
-    string teamA;
-    string teamB;
+    string teamA_name;
+    string teamB_name;
 
     cout << "Enter Team A Name : " ;
-    getline(cin ,teamA);
+    getline(cin ,teamA_name);
     cout << "Enter Team B Name : " ;
-    getline(cin ,teamB);
+    getline(cin ,teamB_name);
     
     controller k;
-    k.starting_team(teamA,teamB);
+    k.starting_team(teamA_name,teamB_name);
 
     string command ;
-    int number = 0 ;
-    while (number < 15)
+    
+    int round = 1 ;
+    while (round <= 15)
     {
+        for(int i = 1 ; i >= 0 ; i--)
+        {
+            int energy = k.Energy_level(round , i);
+            
+
+            
+        }
         
-        
+        round++;
     }
     
 
