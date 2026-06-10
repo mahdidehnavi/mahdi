@@ -29,78 +29,230 @@ void controller::show_hero()
     cout << "└────┴─────────────────────┴──────────┴──────┘\n";
 }
 
-void controller::choice_heros()
+
+
+void controller::choice_herosA()
 {
     int k = 3;
-    int selectedCount = 0;
     while (k > 0)
     {
-        //باید طوری باش=ه که هر بازیکن چند بار انتخاب نشه 
         cout << "Enter a number for choice hero (1-7): ";
         
         int choice;
         cin >> choice;
         
-        switch (choice)
+        bool alreadySelected = false;
+        for (int i = 0; i < teamA.size(); i++)
         {
-            case 1:
-                team.push_back("Doctor White");
-                cout << " Doctor White :add to the team.\n";
-                k--;
-                selectedCount++;
+            if (teamA[i] == choice)
+            {
+                alreadySelected = true;
+                cout << "This hero is already selected! Choose another one.\n";
                 break;
-                
-            case 2:
-                team.push_back("Taha Kuchik");
-                cout << " Taha Kuchik :add to the team.\n";
-                k--;
-                selectedCount++;
-                break;
-                
-            case 3:
-                team.push_back("Dani Golang");
-                cout << " Dani Golang :add to the team.\n";
-                k--;
-                selectedCount++;
-                break;
-                
-            case 4:
-                team.push_back("Amin Emini");
-                cout << " Amin Emini :add to the team.\n";
-                k--;
-                selectedCount++;
-                break;
-                
-            case 5:
-                team.push_back("Taha Bozorg");
-                cout << " Taha Bozorg :add to the team.\n";
-                k--;
-                selectedCount++;
-                break;
-                
-            case 6:
-                team.push_back("Pooya Kazdum");
-                cout << " Pooya Kazdum :add to the team.\n";
-                k--;
-                selectedCount++;
-                break;
-                
-            case 7:
-                team.push_back("Agha Shahriar");
-                cout << " Agha Shahriar :add to the team.\n";
-                k--;
-                selectedCount++;
-                break;
-
+            }
+        }
+        
+        if (choice < 1 || choice > 7)
+        {
+            cout << "Invalid number! Please enter a number between 1-7.\n";
+            continue;
+        }
+        
+        if (!alreadySelected)
+        {
+            switch (choice)
+            {
+                case 1:
+                    teamA.push_back(1);
+                    cout << "Doctor White added to teamA.\n";
+                    k--;
+                    break;
+                    
+                case 2:
+                    teamA.push_back(2);
+                    cout << "Taha Kuchik added to teamA.\n";
+                    k--;
+                    break;
+                    
+                case 3:
+                    teamA.push_back(3);
+                    cout << "Dani Golang added to teamA.\n";
+                    k--;
+                    break;
+                    
+                case 4:
+                    teamA.push_back(4);
+                    cout << "Amin Emini added to teamA.\n";
+                    k--;
+                    break;
+                    
+                case 5:
+                    teamA.push_back(5);
+                    cout << "Taha Bozorg added to teamA.\n";
+                    k--;
+                    break;
+                    
+                case 6:
+                    teamA.push_back(6);
+                    cout << "Pooya Kazdum added to teamA.\n";
+                    k--;
+                    break;
+                    
+                case 7:
+                    teamA.push_back(7);
+                    cout << "Agha Shahriar added to teamA.\n";
+                    k--;
+                    break;
+            }
         }
     }
     
-    cout << "heroes\n";
-    for (int i = 0; i < team.size(); i++)
+    cout << "\nTeam A heroes: ";
+    for (int i = 0; i < teamA.size(); i++)
     {
-        cout << "hero" << i+1 << ": " << team[i] << endl;
+        if (teamA[i]== 1)
+        {
+            cout << "Doctor White" << endl;
+        }
+        else if (teamA[i]== 2)
+        {
+            cout << "Taha Kuchik" << endl;
+        }        
+        else if (teamA[i]== 3)
+        {
+            cout << "Dani Golang" << endl;
+        }        
+        else if (teamA[i]== 4)
+        {
+            cout << "Amin Emini" << endl;
+        }        
+        else if (teamA[i]== 5)
+        {
+            cout << "Taha Bozorg" << endl;
+        }        
+        else if (teamA[i]== 6)
+        {
+            cout << "Pooya Kazdum" << endl;
+        }        
+        else if (teamA[i]== 7)
+        {
+            cout << "Agha Shahriar" << endl;
+        }
+        
+        
     }
-    cout << "════════════════════════════════════════════════════════════════════\n";
+}
+
+void controller::choice_herosB()
+{
+    int k = 3;
+    while (k > 0)
+    {
+        cout << "Enter a number for choice hero (1-7): ";
+        
+        int choice;
+        cin >> choice;
+        
+        bool alreadySelected = false;
+        for (int i = 0; i < teamB.size(); i++)
+        {
+            if (teamB[i] == choice)
+            {
+                alreadySelected = true;
+                cout << "This hero is already selected! Choose another one.\n";
+                break;
+            }
+        }
+        
+        if (choice < 1 || choice > 7)
+        {
+            cout << "Invalid number! Please enter a number between 1-7.\n";
+            continue;
+        }
+        
+        if (!alreadySelected)
+        {
+            switch (choice)
+            {
+                case 1:
+                    teamB.push_back(1);
+                    cout << "Doctor White added to teamB.\n";
+                    k--;
+                    break;
+                    
+                case 2:
+                    teamB.push_back(2);
+                    cout << "Taha Kuchik added to teamB.\n";
+                    k--;
+                    break;
+                    
+                case 3:
+                    teamB.push_back(3);
+                    cout << "Dani Golang added to teamB.\n";
+                    k--;
+                    break;
+                    
+                case 4:
+                    teamB.push_back(4);
+                    cout << "Amin Emini added to teamB.\n";
+                    k--;
+                    break;
+                    
+                case 5:
+                    teamB.push_back(5);
+                    cout << "Taha Bozorg added to teamB.\n";
+                    k--;
+                    break;
+                    
+                case 6:
+                    teamB.push_back(6);
+                    cout << "Pooya Kazdum added to teamB.\n";
+                    k--;
+                    break;
+                    
+                case 7:
+                    teamB.push_back(7);
+                    cout << "Agha Shahriar added to teamB.\n";
+                    k--;
+                    break;
+            }
+        }
+    }
+    
+    cout << "\nTeam B heroes: ";
+    for (int i = 0; i < teamA.size(); i++)
+    {
+        if (teamB[i]== 1)
+        {
+            cout << "Doctor White" << endl;
+        }
+        else if (teamB[i]== 2)
+        {
+            cout << "Taha Kuchik" << endl;
+        }        
+        else if (teamB[i]== 3)
+        {
+            cout << "Dani Golang" << endl;
+        }        
+        else if (teamB[i]== 4)
+        {
+            cout << "Amin Emini" << endl;
+        }        
+        else if (teamB[i]== 5)
+        {
+            cout << "Taha Bozorg" << endl;
+        }        
+        else if (teamB[i]== 6)
+        {
+            cout << "Pooya Kazdum" << endl;
+        }        
+        else if (teamB[i]== 7)
+        {
+            cout << "Agha Shahriar" << endl;
+        }
+        
+        
+    }
 }
 
 int controller::get_number()

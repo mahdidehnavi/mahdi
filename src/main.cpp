@@ -23,7 +23,7 @@ int main()
     getline(cin ,teamB_name);
     
     controller k;
-    k.starting_team(teamA,teamB);
+    k.starting_team(teamA_name,teamB_name);
 
     srand(static_cast<unsigned int>(time(0))) ;
 
