@@ -57,7 +57,7 @@ int main()
                     } else {
                         team_name = teamB_name;
                     }
-                    int energy = k.Energy_level(count , i)
+                    int energy = k.Energy_level(count , i);
         
                     
                 }
