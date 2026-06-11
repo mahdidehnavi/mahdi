@@ -39,25 +39,33 @@ int main()
         {
             controller k;
             k.show_hero();
-            cout << "TEAM A"<<endl ;
-            k.choice_heros();    
+
+
             
-             k.team.clear();
+            cout << "TEAM A"<<endl ;
+            k.choice_herosA();    
+            
+             k.teamA.clear();
 
             cout << "TEAM B"<<endl ;
-            k.choice_heros();
+            k.choice_herosB();
+
+
+
+
             int count = 15 ;
-            int turn = 1 ;
+            int turn = 1 + rand() % 2;
+
+
             while (count > 0)
             {
                 if (turn == 1)
                 {
                     //برای کار های تیم A
 
+                    k.start_action_teamA();
 
 
-
-                    count--;
                     turn = 2;
                 }
                 else if (turn == 2)
@@ -65,6 +73,7 @@ int main()
 
                     //برای کار های تیم B
 
+                    k.start_action_teamB();
 
 
 
@@ -73,10 +82,11 @@ int main()
 
 
 
-                    count--;
+
                     turn = 1;
                 }
-                
+                    count--;
+            
                 
             }
             
