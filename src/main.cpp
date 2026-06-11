@@ -57,8 +57,7 @@ int main()
                     } else {
                         team_name = teamB_name;
                     }
-                    int energy = k.Energy_level(count , i);
-                    cout << team_name << "  :  " << energy << endl;
+                    int energy = k.Energy_level(count , i)
         
                     
                 }
