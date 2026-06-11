@@ -69,6 +69,16 @@ bool Hero::get_alive() const
     return alive;
 }
 
+int Hero::get_to_get_rage() const
+{
+    return to_get_rage;
+}
+
+string Hero::get_Angry_massage() const
+{
+    return Angry_massage;
+}
+
 
 Hero::~Hero()
 {

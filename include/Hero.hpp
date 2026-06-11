@@ -22,6 +22,8 @@ public:
     std::string get_role() const;
     int get_hp() const;
     bool get_alive() const;
+    int get_to_get_rage() const;
+    std::string get_Angry_massage() const;
     ~Hero();
 };
 
