@@ -64,6 +64,7 @@ int main()
                     k.start_action_teamA();
 
 
+                    
                     turn = 2;
                 }
                 else if (turn == 2)
