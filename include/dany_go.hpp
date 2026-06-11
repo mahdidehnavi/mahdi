@@ -8,5 +8,8 @@ private:
     
 public:
     dany_go();
+    void ability1() override; 
+    void ability2() override;
+    void special_ablity() override;
     ~dany_go();
 };

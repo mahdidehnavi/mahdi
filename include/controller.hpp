@@ -17,6 +17,9 @@ public:
     void show_hero();   
     void choice_herosA();
     void choice_herosB();
+    void start_action_teamA();
+    void start_action_teamB();
+    void end_game();
     void manager_step();
     int get_number();
     void end_game();
