@@ -25,7 +25,6 @@ int main()
     getline(cin ,teamB_name);
     
     controller k;
-    k.starting_team(teamA_name,teamB_name);
 
     string command ;
 
@@ -33,21 +32,16 @@ int main()
         cout << "1  = (start game) "<< endl;
         cout << "2  = (end game) "<< endl;
         getline(cin,command);
+
         if (command == "1")
         {
-            controller k;
             k.show_hero();
 
-
-            
             cout << "TEAM A"<<endl ;
-            k.choice_herosA();    
-            
-             k.teamA.clear();
+            k.choice_heros(k.teamA, "TeamA");    
 
             cout << "TEAM B"<<endl ;
-            k.choice_herosB();
-
+            k.choice_heros(k.teamB, "TeamB");
 
             int count = 15;
             int turn = 1 + rand() % 2;
@@ -57,51 +51,25 @@ int main()
             {
                 if (turn == 1)
                 {
-                    //برای کار های تیم A
-
-                    k.start_action_teamA();
-
-
-                    
+                    k.start_action(k.teamA, teamA_name);
                     turn = 2;
                 }
                 else if (turn == 2)
                 {
-
-                    //برای کار های تیم B
-
-                    k.start_action_teamB();
-
-
-
-
-
-
-
-
-
+                    k.start_action(k.teamB, teamB_name);
                     turn = 1;
                 }
-                    count--;
-                    
-
+                count--;
+                
                 for(int i = 1 ; i >= 0 ; i--)
                 {
-                    string team_name;
-                    if(i == 1){
-                        team_name = teamA_name;
-                    } else {
-                        team_name = teamB_name;
-                    }
                     int energy = k.Energy_level(round , i);
-
-                    
                 }
                 
                 round++;
             }
-
         }
+
         else if (command == "2")
         {
             return 0;
