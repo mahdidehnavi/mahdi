@@ -20,7 +20,6 @@ public:
     void start_action_teamA();
     void start_action_teamB();
     void end_game();
-    void manager_step();
     int get_number();
     void end_game();
     ~controller();

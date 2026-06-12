@@ -49,13 +49,11 @@ int main()
             k.choice_herosB();
 
 
-
-
-            int count = 15 ;
+            int count = 15;
             int turn = 1 + rand() % 2;
+            int round = 1;
 
-
-            while (count > 0)
+            while (count > 0 && round <= 15)
             {
                 if (turn == 1)
                 {
@@ -64,6 +62,7 @@ int main()
                     k.start_action_teamA();
 
 
+                    
                     turn = 2;
                 }
                 else if (turn == 2)
@@ -84,14 +83,8 @@ int main()
                     turn = 1;
                 }
                     count--;
-            
-                
-            }
+                    
 
-            
-            int count = 1 ;
-            while (count <= 15)
-            {
                 for(int i = 1 ; i >= 0 ; i--)
                 {
                     string team_name;
@@ -100,15 +93,14 @@ int main()
                     } else {
                         team_name = teamB_name;
                     }
-                    int energy = k.Energy_level(count , i);
-        
+                    int energy = k.Energy_level(round , i);
+
                     
                 }
                 
-                count++;
+                round++;
             }
- 
-            
+
         }
         else if (command == "2")
         {

@@ -551,10 +551,6 @@ int controller::Energy_level(const int round ,const bool t)  //میزان انر
     }
 }
 
-void controller::manager_step()
-{
-
-}
 
 void controller::end_game()
 {
