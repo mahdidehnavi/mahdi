@@ -1,7 +1,21 @@
-mahdi dehnavi 40412358018
-mohammad javad kazemlo 40412358038
+``` c++
+{
+    "firstName"      : "mahdi"         .
+    "lastName"       : "dehnavi"       .
+    "NumberSatudent" : "40412358018"   .
+}
+```
+___
+``` C++
+{
+    "firstName"      : "mohammad javad".
+    "lastName"       : "kazemlo"       .
+    "NumberSatudent" : "40412358038"   .
+}
+```
 
 origin	https://github.com/mahdidehnavi/mahdi.git (fetch)
+___
 origin	https://github.com/mahdidehnavi/mahdi.git (push)
 
 # Advanced Programming - Assignment 2
@@ -10,5 +24,5 @@ Second assignment of the Advanced Programming course
 
 Bu-Ali Sina University
 
-Implemented in C++
+Implemented in `C++`
 
