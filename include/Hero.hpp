@@ -7,16 +7,17 @@ protected:
     std::string name ;
     std::string role;
     int Hp;
+    int MaxHp;
     std::string Angry_massage;
     int rageThreshold;
     int to_get_rage;
-    bool alive;
 public:
     Hero(std::string n, std::string ro , int h , int rage , std::string AngMas);
     virtual void ability1(); 
     virtual void ability2();
     virtual void special_ablity();
-    void takedamage
+    void takedamage(const int dmg);
+    bool checkalive();
     bool checkRage();
     void apdateRageState(bool);
     std::string get_name() const;
