@@ -9,6 +9,21 @@ dany_go::dany_go() :Hero("Danny Golang" , "Defender" , 600 , 4 , "<< No one cros
 
 }
 
+void dany_go::ability1()
+{
+
+}
+
+void dany_go::ability2()
+{
+
+}
+
+void dany_go::special_ablity()
+{
+
+}
+
 dany_go::~dany_go()
 {
 }

@@ -9,6 +9,21 @@ shahriar::shahriar() :Hero("Mr shahriar" , "Joker" , 500 , 4 , "<< Good becomes 
 
 }
 
+void shahriar::ability1()
+{
+
+}
+
+void shahriar::ability2()
+{
+
+}
+    
+void shahriar::special_ablity()
+{
+
+}
+    
 shahriar::~shahriar()
 {
 }

@@ -9,6 +9,21 @@ amin::amin() :Hero("Amin emini" , "Attacker" , 500 , 3 , "<< One.. Two.. Three..
 
 }
 
+void amin::ability1()
+{
+
+}
+    
+void amin::ability2()
+{
+
+}
+
+void amin::special_ablity()
+{
+    
+}
+
 amin::~amin()
 {
 }

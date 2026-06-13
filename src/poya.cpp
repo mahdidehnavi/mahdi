@@ -9,6 +9,21 @@ poya::poya() :Hero("poya kazhdom" , "Attacker" , 500 , 3 , "<< Did you see my bi
 
 }
 
+void poya::ability1()
+{
+
+} 
+    
+void poya::ability2()
+{
+
+}
+    
+void poya::special_ablity()
+{
+    
+}
+    
 poya::~poya()
 {
 }

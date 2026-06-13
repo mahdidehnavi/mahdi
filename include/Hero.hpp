@@ -16,6 +16,7 @@ public:
     virtual void ability1(); 
     virtual void ability2();
     virtual void special_ablity();
+    void takedamage
     bool checkRage();
     void apdateRageState(bool);
     std::string get_name() const;

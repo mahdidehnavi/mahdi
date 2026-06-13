@@ -25,6 +25,7 @@ int main()
     getline(cin ,teamB_name);
     
     controller k;
+    k.starting_team(teamA_name,teamB_name);
 
     string command ;
 
@@ -35,35 +36,61 @@ int main()
 
         if (command == "1")
         {
+            Hero* ptrTeamA[3];
+            Hero* ptrTeamB[3];
+
             k.show_hero();
-
-            cout << "TEAM A"<<endl ;
-            k.choice_heros(k.teamA, "TeamA");    
-
-            cout << "TEAM B"<<endl ;
-            k.choice_heros(k.teamB, "TeamB");
+            cout << teamA_name << endl ;
+            k.choice_heros(k.teamA, teamA_name , ptrTeamA);    
+            
+            k.show_hero();
+            cout << teamB_name << endl ;
+            k.choice_heros(k.teamB, teamB_name , ptrTeamB);
 
             int count = 15;
-            int turn = 1 + rand() % 2;
+            //int turn = 1 + rand() % 2;
             int round = 1;
 
             while (count > 0 && round <= 15)
             {
-                if (turn == 1)
-                {
-                    k.start_action(k.teamA, teamA_name);
-                    turn = 2;
-                }
-                else if (turn == 2)
-                {
-                    k.start_action(k.teamB, teamB_name);
-                    turn = 1;
-                }
-                count--;
+            //     if (turn == 1)
+            //     {
+            //         k.start_action(k.teamA, teamA_name);
+            //         turn = 2;
+            //     }
+            //     else if (turn == 2)
+            //     {
+            //         k.start_action(k.teamB, teamB_name);
+            //         turn = 1;
+            //     }
+            //     count--;
+            string team_name;
+            Hero* ptTeam[3];
                 
                 for(int i = 1 ; i >= 0 ; i--)
                 {
+                    if(i == 1)
+                    {
+                        team_name = teamA_name;
+                        for(int i = 0 ; i < 3 ; i++)
+                        {
+                            ptTeam[i] = ptrTeamA[i];    
+                        }
+                        
+                        /////////
+                    } 
+                    else {
+                        team_name = teamB_name;
+                        for(int i = 0 ; i < 3 ; i++)
+                        {
+                            ptTeam[i] = ptrTeamB[i];
+                        }
+                        /////////
+                    }
                     int energy = k.Energy_level(round , i);
+                    
+
+
                 }
                 
                 round++;

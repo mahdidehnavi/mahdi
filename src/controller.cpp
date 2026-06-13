@@ -5,6 +5,14 @@
 using namespace std;
 #include "controller.hpp"
 
+#include "Dr_white.hpp"
+#include "taha_k.hpp"
+#include "dany_go.hpp"
+#include "amin.hpp"
+#include "taha_b.hpp"
+#include "poya.hpp"
+#include "shahriar.hpp"
+
 
 
 controller::controller(/* args */)
@@ -34,10 +42,10 @@ void controller::show_hero()
 
 
 
-void controller::choice_heros(std::vector<int>& team, const std::string& teamName)
+void controller::choice_heros(std::vector<int>& team , const std::string& teamName , Hero* ptrteam[])
 {
-    int k = 3;
-    while (k > 0)
+    int k = 0;
+    while (k < 3)
     {
         cout << "Enter a number for choice hero (1-7): ";
         
@@ -67,44 +75,51 @@ void controller::choice_heros(std::vector<int>& team, const std::string& teamNam
             {
                 case 1:
                     team.push_back(1);
+                    ptrteam[k] = new Dr_white();
                     cout << "Doctor White added to " << teamName << ".\n";
-                    k--;
+                    k++;
                     break;
                     
                 case 2:
                     team.push_back(2);
+                    ptrteam[k] = new taha_k();
                     cout << "Taha Kuchik added to " << teamName << ".\n";
-                    k--;
+                    k++;
                     break;
                     
                 case 3:
                     team.push_back(3);
+                    ptrteam[k] = new dany_go();
                     cout << "Dani Golang added to " << teamName << ".\n";
-                    k--;
+                    k++;
                     break;
                     
                 case 4:
                     team.push_back(4);
+                    ptrteam[k] = new amin();
                     cout << "Amin Emini added to " << teamName << ".\n";
-                    k--;
+                    k++;
                     break;
                     
                 case 5:
                     team.push_back(5);
+                    ptrteam[k] = new taha_b();
                     cout << "Taha Bozorg added to " << teamName << ".\n";
-                    k--;
+                    k++;
                     break;
                     
                 case 6:
                     team.push_back(6);
+                    ptrteam[k] = new poya();
                     cout << "Pooya Kazdum added to " << teamName << ".\n";
-                    k--;
+                    k++;
                     break;
                     
                 case 7:
                     team.push_back(7);
+                    ptrteam[k] = new shahriar();
                     cout << "Agha Shahriar added to " << teamName << ".\n";
-                    k--;
+                    k++;
                     break;
             }
         }
@@ -142,6 +157,7 @@ void controller::choice_heros(std::vector<int>& team, const std::string& teamNam
             cout << "Agha Shahriar" << endl;
         }
     }
+    cout << endl;
 }
 
 
@@ -289,7 +305,20 @@ int controller::get_number()
 
 
 
-
+void controller::starting_team(string & A, string &B) //تیم شروع کننده
+{
+    srand(time(nullptr));
+    int random = rand() % 2;
+    if(random == 0)
+    {
+        cout << "\n<< " << A << " Team goes first! >>" << endl;
+    } else {
+        string help = A;
+        A = B;
+        B = help;
+        cout << "\n<< " << A << " Team goes first! >>" << endl;
+    }
+}
 
 
 int controller::Energy_level(const int round ,const bool t)  

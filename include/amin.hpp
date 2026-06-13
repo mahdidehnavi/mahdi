@@ -8,5 +8,8 @@ private:
     
 public:
     amin();
+    void ability1() override; 
+    void ability2() override;
+    void special_ablity() override;
     ~amin();
 };
