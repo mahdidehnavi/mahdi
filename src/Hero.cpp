@@ -28,13 +28,19 @@ void Hero::special_ablity()
 
 }
 
-void Hero::takedamage(const int dmg)
+void Hero::takedamage(const int dmg) // کم کردن جون از قهرمان
 {
     Hp -= dmg;
     if(Hp < 0) Hp = 0;
 }
 
-bool Hero::checkalive()
+void Hero::heal(const int amount) // اضافه کردن جون به قهرمان
+{
+    Hp += amount;
+    if(Hp > MaxHp) Hp = MaxHp;
+}
+
+bool Hero::checkalive() const // چک کردن اینکه قهرمان زنده است یا نه
 {
     if(Hp == 0)
     {
@@ -45,7 +51,7 @@ bool Hero::checkalive()
     }
 }
 
-bool Hero::checkRage() //برای چک کردن اینکه میشه از خشم استفاده کرد یانه
+bool Hero::checkRage() const //برای چک کردن اینکه میشه از خشم استفاده کرد یانه
 {
     if(to_get_rage == 0){
         return true;

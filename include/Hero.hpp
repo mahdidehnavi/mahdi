@@ -17,8 +17,9 @@ public:
     virtual void ability2();
     virtual void special_ablity();
     void takedamage(const int dmg);
-    bool checkalive();
-    bool checkRage();
+    void heal(const int);
+    bool checkalive() const;
+    bool checkRage()const;
     void apdateRageState(bool);
     std::string get_name() const;
     std::string get_role() const;

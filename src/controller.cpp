@@ -21,7 +21,7 @@ controller::controller(/* args */)
 
 
 
-void controller::show_hero()
+void controller::show_hero() const
 {
     cout << "\n                       heroes                            \n";
     cout << "┌────┬─────────────────────┬──────────┬──────┬\n";
@@ -125,7 +125,7 @@ void controller::choice_heros(std::vector<int>& team , const std::string& teamNa
         }
     }
     
-    cout << "\n" << teamName << " heroes: ";
+    cout << "\n" << teamName << " heroes: \n";
     for (int i = 0; i < team.size(); i++)
     {
         if (team[i]== 1)
@@ -298,7 +298,7 @@ void controller::start_action(std::vector<int>& team, const std::string& teamNam
 
 
 
-int controller::get_number()
+int controller::get_number() const
 {
     return number;
 }
@@ -311,12 +311,12 @@ void controller::starting_team(string & A, string &B) //تیم شروع کنند
     int random = rand() % 2;
     if(random == 0)
     {
-        cout << "\n<< " << A << " Team goes first! >>" << endl;
+        cout << "\n<< " << A << " Team goes first! >>\n\n";
     } else {
         string help = A;
         A = B;
         B = help;
-        cout << "\n<< " << A << " Team goes first! >>" << endl;
+        cout << "\n<< " << A << " Team goes first! >>\n\n";
     }
 }
 
@@ -355,6 +355,16 @@ int controller::Energy_level(const int round ,const bool t)
                 return 10;
         }
 
+    }
+}
+
+void controller::useEnergy(int& Energy , int amount) // کم شدن انرژی
+{
+    if(Energy >= amount) 
+    {
+        Energy -= amount;
+    } else {
+        cout << "you cann't use this ability." << endl;
     }
 }
 
@@ -458,9 +468,14 @@ void controller::choice_ability(std::vector<int>& team, const std::string& teamN
 
 
 
-void controller::end_game()
+bool controller::end_game(Hero* ptrteam[]) const
 {
-
+    if(ptrteam[0]->checkalive() || ptrteam[1]->checkalive() || ptrteam[2]->checkalive())
+    {
+        return true;
+    } else {
+        return false; //end game 
+    }
 }
 
 

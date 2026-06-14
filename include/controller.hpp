@@ -15,12 +15,13 @@ public:
     controller(/* args */);
     void starting_team(string & , string &);
     int Energy_level(const int , const bool);
-    void show_hero();   
+    void useEnergy(int& Energy ,const int amount);
+    void show_hero() const;   
     void choice_heros(std::vector<int>& team ,const std::string& teamName,Hero* ptrteam[]);
     void start_action(std::vector<int>& team, const std::string& teamName);
     void choice_ability(std::vector<int>& team, const std::string& teamName, int& Energy);
-    void end_game();
-    int get_number();
+    bool end_game(Hero* ptrteam[]) const;
+    int get_number() const;
     ~controller();
 };
 
