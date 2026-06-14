@@ -21,6 +21,7 @@ public:
     bool checkalive() const;
     bool checkRage()const;
     void apdateRageState(bool);
+    virtual void choice_ability(int Energy, class controller& k);
     std::string get_name() const;
     std::string get_role() const;
     int get_hp() const;

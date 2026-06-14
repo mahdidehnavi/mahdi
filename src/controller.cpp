@@ -422,7 +422,7 @@ void controller::choice_ability(std::vector<int>& team, const std::string& teamN
         }
     }
     
-    cout << "Enter a number for hero ";
+    cout << "Enter a number for choose -> hero ";
     int choose ;
     cin >> choose ;
 
@@ -430,7 +430,7 @@ void controller::choice_ability(std::vector<int>& team, const std::string& teamN
     {
         case 1:
             {
-                cout << "Enter a number for ability ";
+                cout << "Enter a number for choose -> ability ";
                 cout << "Number = 1 ---> ability 1";
                 cout << "Number = 2 ---> ability 2";
                 cout << "Number = 3 ---> specialability or ability 3";

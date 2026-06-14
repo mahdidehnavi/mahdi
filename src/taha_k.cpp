@@ -24,6 +24,20 @@ void taha_k::special_ablity()
 
 }
 
+
+void taha_k::choice_ability(int Energy, controller& k)
+{
+    cout << "<< Taha Kuchik >>\n";
+    cout << " 1.SHARP BLADE (2 Energy)" << endl;
+    cout << " 2.BLOOD SERUM (4 Energy)" << endl;
+    cout << " Special = COMPLETE QUARANTINE (4 Energy)";
+    if(checkRage()){
+        cout << " < you can use >" << endl;
+    } else {
+        cout << " < you can not use >" << endl;
+    }
+}
+
 taha_k::~taha_k()
 {
 }

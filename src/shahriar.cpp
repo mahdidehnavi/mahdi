@@ -23,6 +23,21 @@ void shahriar::special_ablity()
 {
 
 }
+
+
+void shahriar::choice_ability(int Energy, controller& k)
+{
+    cout << "<< Agha Shahriar >>\n";
+    cout << " 1.MOCK (2 Energy)" << endl;
+    cout << " 2.STUBBORN (4 Energy)" << endl;
+    cout << " Special = WORLD INVERSION (8 Energy)";
+    if(checkRage()){
+        cout << " < you can use >" << endl;
+    } else {
+        cout << " < you can not use >" << endl;
+    }
+}
+
     
 shahriar::~shahriar()
 {
