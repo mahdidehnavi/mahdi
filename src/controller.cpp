@@ -35,6 +35,7 @@ void controller::show_hero() const
     cout << "│ 6  │ Pooya Kazdum        │ Attacker │ 550  │\n";
     cout << "│ 7  │ Agha Shahriar       │ Joker    │ 500  │\n";
     cout << "└────┴─────────────────────┴──────────┴──────┘\n";
+
 }
 
 
@@ -298,21 +299,18 @@ void controller::start_action(std::vector<int>& team, const std::string& teamNam
 
 
 
-int controller::get_number() const
-{
-    return number;
-}
 
 
-
-void controller::starting_team(string & A, string &B) //تیم شروع کننده
+void controller::starting_team(string & A, string & B) 
 {
     srand(time(nullptr));
     int random = rand() % 2;
     if(random == 0)
     {
         cout << "\n<< " << A << " Team goes first! >>\n\n";
-    } else {
+    }
+    else 
+    {
         string help = A;
         A = B;
         B = help;
@@ -358,7 +356,7 @@ int controller::Energy_level(const int round ,const bool t)
     }
 }
 
-void controller::useEnergy(int& Energy , int amount) // کم شدن انرژی
+void controller::useEnergy(int& Energy , int amount) 
 {
     if(Energy >= amount) 
     {
@@ -473,11 +471,23 @@ bool controller::end_game(Hero* ptrteam[]) const
     if(ptrteam[0]->checkalive() || ptrteam[1]->checkalive() || ptrteam[2]->checkalive())
     {
         return true;
-    } else {
+    } 
+    else 
+    {
         return false; //end game 
     }
 }
 
+
+
+
+
+
+
+int controller::get_number() const
+{
+    return number;
+}
 
 controller::~controller()
 {
