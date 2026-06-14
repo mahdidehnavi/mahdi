@@ -330,45 +330,8 @@ int controller::Energy_level(const int round ,const bool t)
 }
 
 
-void controller::choice_ability(std::vector<int>& team, const std::string& teamName, int& currentEnergy)
+void controller::choice_ability(std::vector<int>& team, const std::string& teamName, int& Energy)
 {
-    cout << "\n========================================" << endl;
-    cout << teamName << " - Your Turn!" << endl;
-    cout << "Current Energy: " << currentEnergy << endl;
-    cout << "========================================" << endl;
-        
-    cout << "\nSelect a hero:" << endl;
-    for (int i = 0; i < team.size(); i++)
-    {
-        cout << i + 1 << ". ";
-        switch (team[i])
-        {
-            case 1: 
-                cout << "Doctor White (Healer)" << endl; 
-                break;
-            case 2: 
-                cout << "Taha Kuchik (Healer)" << endl; 
-                break;
-            case 3: 
-                cout << "Dani Golang (Defender)" << endl; 
-                break;
-            case 4: 
-                cout << "Amin Emini (Attacker)" << endl; 
-                break;
-            case 5: 
-                cout << "Taha Bozorg (Attacker)" << endl; 
-                break;
-            case 6: 
-                cout << "Pooya Kazdum (Attacker)" << endl; 
-                break;
-            case 7: 
-                cout << "Agha Shahriar (Joker)" << endl; 
-                break;
-        }
-    }
-    cout << "0. End turn" << endl;
-
-
     for (int i = 0; i < team.size(); i++)
     {
         if (team[i] == 1)
@@ -422,7 +385,91 @@ void controller::choice_ability(std::vector<int>& team, const std::string& teamN
         }
     }
     
-    
+    cout << "Enter a number for hero ";
+    int choose ;
+    cin >> choose ;
+
+    switch (choose)
+    {
+        case 1:
+            {
+                cout << "Enter a number for ability ";
+                cout << "Number = 1 ---> ability 1";
+                cout << "Number = 2 ---> ability 2";
+                cout << "Number = 3 ---> specialability or ability 3";
+                int pick;
+                cin >> pick ;
+                if (pick == 1)
+                {
+                    //ability1
+                }
+                else if(pick == 2)
+                {
+                    //ability2
+
+                }                
+                else if(pick == 3)
+                {
+                    //special_ability
+
+                }
+                
+
+            }
+
+            
+        case 2:
+            {
+                cout << "Enter a number for ability ";
+                cout << "Number = 1 ---> ability 1";
+                cout << "Number = 2 ---> ability 2";
+                cout << "Number = 3 ---> specialability or ability 3";
+                int pick;
+                cin >> pick ;
+                if (pick == 1)
+                {
+                    //ability1
+                }
+                else if(pick == 2)
+                {
+                    //ability2
+
+                }                
+                else if(pick == 3)
+                {
+                    //special_ability
+
+                }
+
+            }
+
+            
+        case 3:
+            {
+                cout << "Enter a number for ability ";
+                cout << "Number = 1 ---> ability 1";
+                cout << "Number = 2 ---> ability 2";
+                cout << "Number = 3 ---> specialability or ability 3";
+                int pick;
+                cin >> pick ;
+                if (pick == 1)
+                {
+                    //ability1
+                }
+                else if(pick == 2)
+                {
+                    //ability2
+
+                }                
+                else if(pick == 3)
+                {
+                    //special_ability
+
+                }
+            }
+            
+            
+    }
     
 }
 
