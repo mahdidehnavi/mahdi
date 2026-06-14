@@ -9,21 +9,26 @@ shahriar::shahriar() :Hero("Mr shahriar" , "Joker" , 500 , 4 , "<< Good becomes 
 
 }
 
-void shahriar::ability1()
+void shahriar::ability1(int Energy)
 {
 
 }
 
-void shahriar::ability2()
-{
-
-}
-    
-void shahriar::special_ablity()
+void shahriar::ability2(int Energy)
 {
 
 }
     
+void shahriar::special_ablity(int Energy)
+{
+
+}
+    
+void shahriar::choice_ability(int Energy , controller& k) 
+{
+    
+}
+
 shahriar::~shahriar()
 {
 }

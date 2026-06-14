@@ -13,7 +13,7 @@ public:
     std::vector <int> teamA ;
     std::vector <int> teamB ;
     controller(/* args */);
-    void starting_team(string & , string &);
+    void starting_team(std::string & , std::string &);
     int Energy_level(const int , const bool);
     void useEnergy(int& Energy ,const int amount);
     void show_hero() const;   

@@ -15,18 +15,6 @@ Hero::Hero(string n, string ro , int h ,int rage , string AngMas )
     Angry_massage = AngMas;
 }
 
-void Hero::ability1()
-{
-
-}
-void Hero::ability2()
-{
-
-}
-void Hero::special_ablity()
-{
-
-}
 
 void Hero::takedamage(const int dmg) // کم کردن جون از قهرمان
 {
