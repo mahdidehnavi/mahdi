@@ -161,6 +161,41 @@ void controller::choice_heros(std::vector<int>& team , const std::string& teamNa
     cout << endl;
 }
 
+void controller::Enemy_Ability(std::vector<int>& team , Hero* ptrteam[])
+{
+    for (int i = 0; i < team.size(); i++)
+    {
+        if (team[i]== 1)
+        {
+            cout << "\t\t\t" << i+1 << ".Doctor White  HP : " << ptrteam[i]->get_hp() << endl;
+        }
+        else if (team[i]== 2)
+        {
+            cout << "\t\t\t" << i+1 << ".Taha Kuchik  HP : " << ptrteam[i]->get_hp() << endl;
+        }        
+        else if (team[i]== 3)
+        {
+            cout << "\t\t\t" << i+1 << ".Dani Golang  HP : " << ptrteam[i]->get_hp() << endl;
+        }        
+        else if (team[i]== 4)
+        {
+            cout << "\t\t\t" << i+1 << ".Amin Emini  HP : " << ptrteam[i]->get_hp() << endl;
+        }        
+        else if (team[i]== 5)
+        {
+            cout << "\t\t\t" << i+1 << ".Taha Bozorg  HP : " << ptrteam[i]->get_hp() << endl;
+        }        
+        else if (team[i]== 6)
+        {
+            cout << "\t\t\t" << i+1 << ".Pooya Kazdum  HP : " << ptrteam[i]->get_hp() << endl;
+        }        
+        else if (team[i]== 7)
+        {
+            cout << "\t\t\t" << i+1 << ".Agha Shahriar  HP : " << ptrteam[i]->get_hp() << endl;
+        }
+    }
+    cout << endl;
+}
 
 
 
@@ -299,9 +334,7 @@ void controller::start_action(std::vector<int>& team, const std::string& teamNam
 
 
 
-
-
-void controller::starting_team(string & A, string & B) 
+void controller::starting_team(string & A, string & B) //تعین تیم شروع کننده
 {
     srand(time(nullptr));
     int random = rand() % 2;
@@ -319,7 +352,7 @@ void controller::starting_team(string & A, string & B)
 }
 
 
-int controller::Energy_level(const int round ,const bool t)  
+int controller::Energy_level(const int round ,const bool t)  //تعین میزان انرژی
 {
     if(t) 
     {
@@ -356,7 +389,7 @@ int controller::Energy_level(const int round ,const bool t)
     }
 }
 
-void controller::useEnergy(int& Energy , int amount) 
+void controller::useEnergy(int& Energy , int amount) //استفاده از انزژی
 {
     if(Energy >= amount) 
     {
@@ -511,17 +544,15 @@ void controller::choice_ability(std::vector<int>& team, const std::string& teamN
 }
 
 
-
-
-bool controller::end_game(Hero* ptrteam[]) const
+bool controller::end_game(Hero* ptrteam[]) const  //پایان بازی
 {
     if(ptrteam[0]->checkalive() || ptrteam[1]->checkalive() || ptrteam[2]->checkalive())
     {
-        return true;
+        return false;
     } 
     else 
     {
-        return false; //end game 
+        return true; //end game 
     }
 }
 

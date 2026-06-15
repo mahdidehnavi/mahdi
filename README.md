@@ -1,9 +1,9 @@
 
 ## Authors
 
-- [@mahdidehnavi](https://www.github.com/octokatherine)
+- [@mahdidehnavi](https://www.github.com/mahdidehnavi)
 - [@javadykazemlo
-](https://www.github.com/octokatherine)
+](https://www.github.com/javadykazemlo)
 
 ___
 

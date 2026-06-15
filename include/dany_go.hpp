@@ -8,9 +8,9 @@ private:
     
 public:
     dany_go();
-    void ability1() override; 
-    void ability2() override;
-    void special_ablity() override;
-    void choice_ability(int Energy, class controller& k) override;
+    void ability1(int Energy) override; 
+    void ability2(int Energy) override;
+    void special_ablity(int Energy) override;
+    void choice_ability() override;
     ~dany_go();
 };
