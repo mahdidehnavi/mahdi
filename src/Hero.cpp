@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Hero::Hero(string n, string ro , int h ,int rage , string AngMas )
+Hero::Hero(string n, string ro , int h ,int rage , string AngMas , int enerA1 , int enerA2 , int enerspac)
 {
     name = n;
     role = ro;
@@ -13,6 +13,25 @@ Hero::Hero(string n, string ro , int h ,int rage , string AngMas )
     rageThreshold = rage; 
     to_get_rage = rage;
     Angry_massage = AngMas;
+    enrAbility1 = enerA1;
+    enrAbility2 = enerA2;
+    enrSpecAbility = enerspac;
+}
+
+void Hero::Ability(int wAbility, int Energy)
+{
+    switch (wAbility)
+    {
+        case 1:
+            ability1(Energy);
+            break;
+        case 2:
+            ability2(Energy);
+            break;
+        case 3:
+            special_ablity(Energy);
+            break;
+    }
 }
 
 
@@ -85,6 +104,39 @@ string Hero::get_Angry_massage() const
     return Angry_massage;
 }
 
+int Hero::get_enrAbility1() const
+{
+    return enrAbility1;
+}
+
+int Hero::get_enrAbility2() const
+{
+    return enrAbility2;
+}
+
+int Hero::get_enrSpecAbility() const
+{
+    return enrSpecAbility;
+}
+
+int Hero::get_enerAbility(int wAbility) const
+{
+    switch (wAbility)
+    {
+        case 1:
+            return get_enrAbility1();
+            break;
+        case 2:
+            return get_enrAbility2();
+            break;
+        case 3:
+            return get_enrSpecAbility();
+            break;
+        default:
+            return 0;
+            break;
+    }
+}
 
 Hero::~Hero()
 {

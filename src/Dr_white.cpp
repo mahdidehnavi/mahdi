@@ -4,36 +4,40 @@
 
 using namespace std;
 
-Dr_white::Dr_white() :Hero("Doctor White" , "Healer" , 550 , 4 , "<< Bring it to the table... it'll survive if you're lucky. >>" )
+Dr_white::Dr_white() :Hero("Doctor White" , "Healer" , 550 , 4 , "<< Bring it to the table... it'll survive if you're lucky. >>" , 3, 4, 4)
 {
-
 }
 
 void Dr_white::ability1(int Energy)
 {
-
+    cout << "\nability3 Dr White \n";
 } 
     
 void Dr_white::ability2(int Energy)
 {
-
+    cout << "\nability2 Dr White \n";
 }
     
 void Dr_white::special_ablity(int Energy)
 {
-    
+    cout << "\nspecial ability Dr White\n";
 }
     
 void Dr_white::choice_ability(int Energy , controller& k) 
 {
-    cout << "<< Doctor White >>\n";
-    cout << " 1.ASPIRIN (3 Energy)" << endl;
-    cout << " 2.DOPING (4 energy)" << endl;
-    cout << " Special = OPERATING ROOM OPERATIONS  (4 energy)";
+    cout << "<< Doctor White >>";
+    cout << "   ❤️ HP: " << Hp;
+    if(!checkalive()) {
+        cout << "     Dead ☠️ ";
+    }
+    cout << endl;
+    cout << " 1) ASPIRIN (3 Energy)" << endl;
+    cout << " 2) DOPING (4 Energy)" << endl;
+    cout << " 3) Special = OPERATING ROOM OPERATIONS (4 Energy)";
     if(checkRage()){
-        cout << "< you can use >" << endl;
+        cout << "✅ you can use ✅" << endl;
     } else {
-        cout << "< you can not use >" << endl;
+        cout << "❌ you can not use ❌" << endl;
     }
 }
 

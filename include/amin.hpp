@@ -12,6 +12,5 @@ public:
     void ability2(int Energy) override;
     void special_ablity(int Energy) override;
     void choice_ability(int Energy , controller&) override;
-
     ~amin();
 };

@@ -32,7 +32,10 @@ int main()
         cout << "enter a number 1 or 2"<< endl;
         cout << "1  = (start game) "<< endl;
         cout << "2  = (end game) "<< endl;
+        cout << "enter a number -> ";
         getline(cin,command);
+        cout << "════════════════════════════════════════════════════════════════════ \n";
+
         
         if (command == "1")
         {
@@ -50,72 +53,165 @@ int main()
             k.choice_heros(k.teamB, teamB_name , ptrTeamB);
             
             
-            //int turn = 1 + rand() % 2;
             int round = 1;
-            
+            string team_name;
+            string Enemy_name;
+            Hero* ptTeam[3];
+            Hero* ptEnemy[3];
+            int namber;
+            vector <int> team;
+            vector <int> Enemy;
+
             while (round <= 15)
             {
-                //     if (turn == 1)
-                //     {
-                    //         k.start_action(k.teamA, teamA_name);
-            //         turn = 2;
-            //     }
-            //     else if (turn == 2)
-            //     {
-                //         k.start_action(k.teamB, teamB_name);
-                //         turn = 1;
-                //     }
-                //     count--;
-                string team_name;
-                Hero* ptTeam[3];
-                int namber;
-                vector <int> team;
                 
                 for(int j = 1 ; j >= 0 ; j--)
                 {
-                    if(j == 1)
+                    if(j == 1) // team A
                     {
                         team_name = teamA_name;
+                        Enemy_name = teamB_name;
                         for(int i = 0 ; i < 3 ; i++)
                         {
                             ptTeam[i] = ptrTeamA[i];    
-                            team.push_back(k.teamA[i]);                        
+                            ptEnemy[i] = ptrTeamB[i];    
+                            team.push_back(k.teamA[i]); 
+                            Enemy.push_back(k.teamA[i]);                       
                         }
                         
                     } 
-                    else 
+                    else  // team B
                     {
                         team_name = teamB_name;
+                        Enemy_name = teamA_name;
                         for(int i = 0 ; i < 3 ; i++)
                         {
                             ptTeam[i] = ptrTeamB[i];
+                            ptEnemy[i] = ptrTeamA[i];    
                             team.push_back(k.teamB[i]);          
+                            Enemy.push_back(k.teamB[i]);                       
                         }
                         
                     }   
                     int energy = k.Energy_level(round , j);
                     
-                    int use = false;
+                    bool use = false;
+                    int wHero;
+                    int wAbility;
                     while(energy > 0)
                     {
-                        cout << team_name << endl;
+                        cout << "═══════════════════════════════════════════════════════════════════════════ \n";
+                        cout << "              " << team_name << " TURN    { Energy : " << energy << " }" << endl;
                         for(int i = 0 ; i < 3 ; i++){
-                            ptTeam[i]->choice_ability( energy, k);
+                            cout << i+1 << ".";
+                            ptTeam[i]->choice_ability(energy , k);
+                            cout << endl;
                         }
 
-                        cin >> use;
+                        cout << "\t\t\tEnemy: " << Enemy_name << endl;
+                        k.Enemy_Ability(Enemy , ptEnemy); 
 
+                        cout << "0) End Turn" << endl;
 
+                        cout << "Enter Hero nember(1-3)(0 to End): ";
+                        cin >> wHero;
 
+                        if(wHero == 0){
+                            cout << "⏭️ Turn Ended.\n";
+                            break;
+                        }
 
+                        while(wHero < 0 || wHero > 3 || !ptTeam[wHero - 1]->checkalive())
+                        {
+                            if(wHero < 0 || wHero > 3)
+                            {
+                                cout << "Enter a correct Hero nember(1-3)(0 to End): ";
+                                cin >> wHero;
+                                if(wHero == 0){
+                                    break;
+                                }
+                            }
+                            if(!ptTeam[wHero - 1]->checkalive() && wHero != 0)
+                            { 
+                                cout << "☠️ This hero has been defeated!\nChoose another hero(0 to End): ";
+                                cin >> wHero;
+                                if(wHero == 0){
+                                    break;
+                                }
+                            }
+                        }
 
+                        if(wHero == 0){
+                            cout << "⏭️ Turn Ended.\n";
+                            break;
+                        }
 
+                        cout << "Enter Ability nember(1-3)(0 to End): ";
+                        cin >> wAbility;
+
+                        if(wAbility == 0){
+                            cout << "⏭️ Turn Ended.\n";
+                            break;
+                        }
+                        int helpi = 0;
+                        while(wAbility < 0 || wAbility > 3 || !ptTeam[wHero -1]->checkRage() || energy < (ptTeam[wHero -1]->get_enerAbility(wAbility)))
+                        {
+                            if(wAbility < 0 || wAbility > 3)
+                            {
+                                cout << "Enter a correct Ability nember(1-3)(0 to End): ";
+                                cin >> wAbility;
+                                if(wAbility == 0){
+                                    break;
+                                }
+                                helpi = 1;
+                            }
+                            if(energy < (ptTeam[wHero -1]->get_enerAbility(wAbility)))
+                            {
+                                cout << "⚠️ Not enough energy to use this ability!\nChoose another Ability(0 to End): ";
+                                cin >> wAbility;
+                                if(wAbility == 0){
+                                    break;
+                                }
+                                helpi = 1;
+                            }
+                            if(!ptTeam[wHero -1]->checkRage() && helpi == 0)
+                            { 
+                                if(wAbility != 3){
+                                    break;
+                                }
+                                
+                                cout << "🔒 Rage ability is locked!\nChoose another Ability(0 to End): ";
+
+                                cin >> wAbility;
+                            }
+                            helpi = 0;
+                        }
+
+                        if(wAbility == 0){
+                            cout << "⏭️ Turn Ended.\n";
+                            break;
+                        }
+                        
+                        if(wAbility == 3){
+                            use = true;
+                        }
+
+                        energy -= ptTeam[wHero -1]->get_enerAbility(wAbility);
+
+                        ptTeam[wHero - 1]->Ability(wAbility , energy);
+
+                        if( k.end_game(ptTeam) || k.end_game(ptEnemy) )
+                        {
+                            return 0;
+                        }
                     }
+
 
                     for(int i = 0 ; i < 3 ; i++){
                         ptTeam[i]->apdateRageState(use);
                     }
-
+                    team.clear();
+                    Enemy.clear();
 
                 }
                 
@@ -125,6 +221,7 @@ int main()
 
         else if (command == "2")
         {
+            cout << "game is end (:" << endl;
             return 0;
         }
     
@@ -132,3 +229,4 @@ int main()
 
     return 0;
 }
+
